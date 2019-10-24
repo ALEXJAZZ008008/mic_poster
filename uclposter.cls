@@ -19,13 +19,13 @@
 
 % define important lengths
 \newlength{\uclposter@bannerheight}
-\setlength{\uclposter@bannerheight}{14cm}
+\setlength{\uclposter@bannerheight}{15cm}
 
 \newlength{\uclposter@logoheight}
 \setlength{\uclposter@logoheight}{5cm}
 
 \newlength{\uclposter@margin}
-\setlength{\uclposter@margin}{2cm}
+\setlength{\uclposter@margin}{1cm}
 
 % define important colors
 \newcommand{\uclposter@color}{black}
@@ -42,12 +42,12 @@
 
 \DeclareOptionX{portrait}{
 	\PassOptionsToPackage{portrait}{geometry}
-	\setlength{\uclposter@bannerheight}{16cm}
+	\setlength{\uclposter@bannerheight}{15cm}
 }
 
 \DeclareOptionX{landscape}{
 	\PassOptionsToPackage{landscape}{geometry}
-	\setlength{\uclposter@bannerheight}{14cm}
+	\setlength{\uclposter@bannerheight}{15cm}
 }
 
 \DeclareOptionX{bannerheight}{
@@ -93,17 +93,17 @@
 
 % font size
 \renewcommand{\LARGE}{\fontsize{80}{100}\selectfont}
-\renewcommand{\Large}{\fontsize{45}{50}\selectfont}
+\renewcommand{\Large}{\fontsize{40}{50}\selectfont}
 \renewcommand{\large}{\fontsize{35}{40}\selectfont}
 \renewcommand{\normalsize}{\fontsize{30}{35}\selectfont}
-\renewcommand{\footnotesize}{\fontsize{25}{35}\selectfont}
-\renewcommand{\small}{\fontsize{20}{23}\selectfont}
-\renewcommand{\tiny}{\fontsize{16}{18}\selectfont}
+\renewcommand{\footnotesize}{\fontsize{25}{30}\selectfont}
+\renewcommand{\small}{\fontsize{20}{25}\selectfont}
+\renewcommand{\tiny}{\fontsize{15}{20}\selectfont}
 
 % paragraph options
 \RequirePackage[none]{hyphenat} % no hyphenation
 \setlength{\parindent}{0pt}
-\newcommand{\defaultparskip}{1cm plus 0.5cm}
+\newcommand{\defaultparskip}{1cm}
 \setlength{\parskip}{\defaultparskip}
 
 % headings
@@ -113,9 +113,10 @@
 \titlespacing{\subsubsection}{0pt}{\parskip}{-0.8\parskip}
 
 % font
-\RequirePackage{amsmath}
-\RequirePackage{mathtools}
-\RequirePackage{mathspec}
+
+%\RequirePackage{amsmath}
+%\RequirePackage{mathtools}
+%\RequirePackage{mathspec}
 %\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
 %\setallmainfonts{Helvetica}
 %\setsansfont{URW Gothic L}
@@ -161,7 +162,7 @@
 \makeatletter
 
 % affiliations on one line
-%\renewcommand\AB@affilsepx{\hspace{0.5em}\protect\Affilfont}
+\renewcommand\AB@affilsepx{\hspace{0.5em}\protect\Affilfont}
 
 % set lengths
 \newlength{\uclposter@bannertextheight}
@@ -187,7 +188,7 @@
 		\par\vfill%
 		{\Large\AB@authlist}%
 		\par\vfill%
-		{\normalsize\AB@affillist}%
+		{\large\AB@affillist}%
 	}%
 	\vspace{-\parskip}%
 	\vspace{2\uclposter@margin}%
